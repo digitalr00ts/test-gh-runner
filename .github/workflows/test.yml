@@ -22,5 +22,6 @@ jobs:
         run: printenv | sort
       - name: EC2 Metadata
         run: |
-            curl http://169.254.169.254/latest/meta-data/instance-type
-            curl http://169.254.169.254/latest/meta-data/instance-life-cycle
+            curl -s http://169.254.169.254/latest/meta-data/instance-type
+            printf '\n'
+            curl -s http://169.254.169.254/latest/meta-data/instance-life-cycle
