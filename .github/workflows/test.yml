@@ -22,7 +22,9 @@ jobs:
 
     steps:
       # - run: sudo chown -R $USER:$USER /home/github/actions-runner/_work/
-      # - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          path: name_of_test 
       - name: EC2 Metadata
         run: |
             sudo yum install jq
